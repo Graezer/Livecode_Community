@@ -1,0 +1,43 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@200&family=Share+Tech+Mono&display=swap');
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+@import "pages/profile";
+@import "components/video_call";
+@import "components/category";
+@import "components/footer";
+@import "components/button";
+@import "components/container";
+@import "components/form";
+@import "components/navbar";
+@import "components/profile";
+@import "components/ticket";
+@import "components/message";
+//@import "jquery-bar-rating/dist/themes/css-stars";
+
+body {
+  background-color: $background;
+  color: $font;
+  caret-color: $second;
+}
+
+input {
+  caret-color: $background;
+}
+
+#form {
+  background-color: $background;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+}

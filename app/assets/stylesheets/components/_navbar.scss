@@ -1,0 +1,70 @@
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: $first;
+  color: $font-two;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+  background: $first;
+  color: $font-two;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.nav-item {
+  color: $font;
+}
+
+#notification {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+
+
+  &:hover {
+    background: red;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 52px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  background: red;
+  color: red;
+}
+
+.dropdown-menu {
+  background-color: $second;
+  border-radius: 4px;
+  border: 1px solid $font;
+  transition-delay: 300ms;
+
+  &:hover {
+    background-color: $second;
+    transition: 300ms;
+  }
+}
+
+.dropdown-item {
+  background-color: $second;
+  border-radius: 4px;
+  color: $font-contrast;
+  transition: 300ms;
+
+  &:hover {
+    background-color: $second;
+    transition: 300ms;
+    color: $first;
+  }
+}

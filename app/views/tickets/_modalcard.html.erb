@@ -1,0 +1,65 @@
+<div class="modal fade" id="ticket-modal-<%=ticket.id%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog d-flex">
+  <% if ticket.status == "open" %>
+    <div class="modal-content modalcard-edit-open">
+  <% elsif ticket.status == "in_progress" %>
+    <div class="modal-content modalcard-edit-in_progress">
+  <% else %>
+    <div class="modal-content modalcard-edit-closed">
+  <% end %>
+      <div class="modal-header modalcard-element-size h-15">
+        <h3 class="modal-title modalcard-element-size" id="exampleModalLabel"><%= ticket.title %></h3>
+
+      </div>
+      <%= link_to user_information_path(ticket.user_id), class: "text-decoration-none white-link" do%>
+      <div class="px-4">
+        <p>Created by: <span class="tital-modal-creator"><%= ticket.user.user_information.first_name %> <%= ticket.user.user_information.last_name %></span></p>
+      </div>
+      <% end %>
+                 <%#************************* TICKET INFORMATIUON ***************************** %>
+      <div class="modal-body link-decoration-modal modalcard-element-size h-70">
+        <div>
+          <ul class="show-ticket-list">
+            <li><strong>Language: </strong><%= ticket.language %></li>
+            <% if ticket.status == "open" %>
+            <li><strong>Status: </strong><span class="ticket-modal-status-open"><%= ticket.status %></span></li>
+            <% elsif ticket.status == "in_progress"%>
+            <li><strong>Status: </strong><span class="ticket-modal-status-in_progress">in progress</span></li>
+            <% else %>
+            <li><strong>Status: </strong><span class="ticket-modal-status-closed"><%= ticket.status %></span></li>
+            <% end %>
+            <br>
+            <li><strong>Description:</strong></li>
+            <div><p><%= ticket.content %></p></div>
+          </ul>
+          <br>
+          </div>
+      </div>
+                  <%#***************************** FOOTER **************************************** %>
+        <div class="modal-footer d-flex flex-row bd-highlight modalcard-element-size h-15">
+                                                                   <%#***************************** BUTTONS ************************************** %>
+          <div>
+          <% if ticket.status == "open" && current_user != ticket.user %>
+
+            <%= button_to "Accept Ticket", chats_path(ticket_id: ticket.id), class:"btn standart-button m-1", method: :post %>
+
+          <% end %>
+
+          <% if ticket.status == "in_progress" && current_user == ticket.user %>
+            <%= link_to "Enter chat", chat_path(ticket.chat), class: "btn standart-button" %>
+          <% end %>
+          </div>
+          <div>
+
+          <%= button_to "Delete ticket", ticket, class:"btn outline-button m-1", style:"float: right;", method: :delete if policy(ticket).destroy?%>
+
+          <% if current_user != ticket.user %>
+          <%#= link_to "Visit #{ticket.user.user_information.first_name} profile", user_information_path(ticket.user_id), class:"btn outline-button m-1", style:"float: right;" %>
+          <% end %>
+          </div>
+            <%#button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button%>
+        </div>
+                  <%#***************************************************************************** %>
+    </div>
+  </div>
+</div>

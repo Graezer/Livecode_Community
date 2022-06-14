@@ -1,0 +1,36 @@
+<div class="container home-container" >
+    <div class="column-left">
+      <div class="home-img d-flex">
+        <img src="https://images.unsplash.com/photo-1580894742597-87bc8789db3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="cover" class="avatar-extra-large">
+      </div>
+    </div>
+    
+    <div class="column-center">
+      <div id="home-title">
+        <h1>LIVECODE - fix your problem!</h1>
+        <br>
+        <br>
+        <div class="text-bottom">
+          <p>Stuck on a coding problem? Stack overflow didn't fix it?</p>
+          <p>you are just one videocall away from simple, nice, clean code..</p>
+          <p>                give coding a chance - with LIVECODE Community!</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="home-bottom">
+        <% if user_signed_in? %>
+          <%= link_to "Enter", tickets_path, class: "btn outline-button", id: "home-button" %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class: "btn outline-button", id: "home-button" %>
+          <p>or</p>
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn outline-button", id: "home-button" %>
+        <% end %>
+            <p> to no more ... </p>
+            <div class="mx-2">
+              <img class="home-avatar" src="https://i.ytimg.com/vi/NJkrzKpwJaw/maxresdefault.jpg" alt="not found">
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

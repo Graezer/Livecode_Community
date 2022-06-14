@@ -1,0 +1,45 @@
+// In bootstrap 5 legend floats left and requires the following element
+// to be cleared. In a radio button or checkbox group the element after
+// the legend will be the automatically generated hidden input; the fix
+// in https://github.com/twbs/bootstrap/pull/30345 applies to the hidden
+// input and has no visual effect. Here we try to fix matters by
+// applying the clear to the div wrapping the first following radio button
+// or checkbox.
+legend ~ div.form-check:first-of-type {
+  clear: left;
+}
+
+.form-control {
+  background-color: $second !important;
+  border-color: $first;
+  border-radius: 4px;
+  // line-height: 0px !important;
+  padding: 8px;
+  border: 1px solid $second;
+  color: $font;
+  min-height: 55.9px;
+}
+
+.form-control:focus {
+  border-color: $font;
+  box-shadow: none;
+  color: $font
+}
+
+// .was-validated .form-control:valid, .form-control.is-valid {
+//   background-image: none;
+//   border-color: none;
+// }
+
+.search-bar {
+  margin-bottom: 1rem;
+  margin-right: 8px;
+  width: 50vw;
+  transition-duration: 300ms;
+}
+
+// .search-bar:hover {
+//   transition: 300ms;
+//   border-radius: 4px;
+//   box-shadow: 1px 1px $font;
+// }

@@ -1,0 +1,163 @@
+.standart-button {
+  background-color: $third;
+  border-radius: 4px;
+  padding: 14px;
+  min-height: 30px;
+  min-width: 170px;
+  // text-decoration: none;
+  color: $font-contrast;
+  border: $second;
+  transition: 1s;
+  max-width: 170px;
+
+  &:hover {
+    text-decoration: none;
+    color: $font-contrast;
+    background: linear-gradient(315deg, #da9003, #d8a443);
+
+    transition: 1s;
+  }
+}
+
+.tiny-button {
+  padding: 4px;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  color: $font;
+  border: 1px solid $second;
+  align-items: center;
+  object-fit: cover;
+}
+
+.tiny-button i {
+  align-items: center;
+  object-fit: cover;
+}
+
+.outline-button {
+  background-color: $background;
+  border: none;
+  border-radius: 4px;
+  padding: 14px;
+  min-height: 30px;
+  min-width: 180px;
+  text-decoration: none;
+  color: $font;
+  border: 2px solid  $second;
+  max-width: 140px;
+  transition: 1s;
+
+  &:hover {
+    // text-decoration: none;
+    color: $font-contrast;
+    border-color: $font-contrast;
+    transition: 1s;
+  }
+}
+
+.outline-button-delete {
+  background-color: $background;
+  border: none;
+  border-radius: 4px;
+  padding: 14px;
+  min-height: 30px;
+  min-width: 130px;
+  text-decoration: none;
+  color: $font;
+  border: $second;
+
+  &:hover {
+    text-decoration: none;
+    border-color: orangered;
+  }
+}
+
+.disabled-outline-button {
+  background-color: $background;
+  border: none;
+  border-radius: 4px;
+  padding: 14px;
+  min-height: 30px;
+  min-width: 130px;
+  text-decoration: none;
+  color: $font;
+  border: $second;
+  opacity: 0.6;
+  cursor: not-allowed;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.profile-button{
+  font-size: 13px;
+  padding: 2px 70px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  text-align: right;
+}
+
+.profile-button:hover{
+  transform: scale(1.1);
+  transition: 300ms;
+  box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 5);
+}
+
+.profile-button:active{
+  transform: scale(0.80);
+}
+
+.nav-button {
+  color: $font;
+
+  &:hover {
+    color: $font-contrast;
+    transition: 0.3s;
+  }
+}
+
+#nav-button-standart {
+  color: $third;
+  
+}
+
+.form-button {
+  display: block;
+  border: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  transition: all ease-in 0.2s;
+  outline: none;
+  cursor: pointer;
+  color: $font-contrast;
+}
+
+.chat-button {
+  margin-left: 8px;
+}
+
+.chat-standard-button {
+  margin-bottom: 24px;
+  margin-left:auto;
+  margin-right:0;
+}
+
+.btn-call-start {
+  border-color: $green;
+}
+
+.btn-call-end {
+  border-color: $orange;
+}
+
+.btn-call-share {
+  border-color: $fourth;
+}
+
+.search-button {
+  margin-left: 8px;
+}
